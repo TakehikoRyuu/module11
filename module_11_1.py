@@ -45,6 +45,7 @@ THE_URL = "https://catfact.ninja/fact"
 for i in range(3):
     response = requests.get(THE_URL) # делает запрос на сервер
     page = response.json() # переводит в формат python
+    print(response.ok)
     print(f"fact in cats №{i+1} - {page['fact']}")
 
 
